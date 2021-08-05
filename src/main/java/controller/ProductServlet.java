@@ -28,6 +28,12 @@ public class ProductServlet extends HttpServlet {
         }
         try {
             switch (action) {
+                case "category":
+                    findAllByCategoryId(request, response);
+                    break;
+                case "findByPrice":
+                    findbyPrice(request, response);
+                    break;
                 case "list_grid":
                     findAllGrid(request, response);
                     break;
@@ -60,6 +66,9 @@ public class ProductServlet extends HttpServlet {
         }
         try {
             switch (action) {
+                case "findByPrice":
+                    findbyPrice(request, response);
+                    break;
                 case "create":
                     create(request, response);
                     break;
@@ -88,6 +97,27 @@ public class ProductServlet extends HttpServlet {
         request.setAttribute("categories", categories);
         requestDispatcher.forward(request, response);
     }
+    private void findAllByCategoryId(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("Product/list.jsp");
+        int cid= Integer.parseInt(request.getParameter("categoryId"));
+        List<Product> products = productDAO.findByCategoryId(cid);
+        request.setAttribute("products", products);
+        List<Category> categories = categoryDAO.findAll();
+        request.setAttribute("categories", categories);
+        requestDispatcher.forward(request, response);
+    }
+
+    private void findbyPrice(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("Product/list.jsp");
+        int priceMin= Integer.parseInt(request.getParameter("priceMin"));
+        int priceMax= Integer.parseInt(request.getParameter("priceMax"));
+        List<Product> products = productDAO.findByPrice(priceMin,priceMax);
+        request.setAttribute("products", products);
+        List<Category> categories = categoryDAO.findAll();
+        request.setAttribute("categories", categories);
+        requestDispatcher.forward(request, response);
+    }
+
     private void findAllGrid(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("Product/list_grid.jsp");
         List<Product> products = productDAO.findAll();

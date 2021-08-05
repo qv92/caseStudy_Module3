@@ -13,6 +13,7 @@ import java.util.List;
 public class CategoryDAO implements GeneralDAO<Category>{
     private SQLConnection sqlConnection = new SQLConnection();
     private final String FIND_ALL = "SELECT * FROM category;";
+    private final String COUNT_BY_ID = "select count(*) from category where categoryId=?;";
     @Override
     public List<Category> findAll() throws SQLException, ClassNotFoundException {
         List<Category> categories = new ArrayList<>();
@@ -26,6 +27,17 @@ public class CategoryDAO implements GeneralDAO<Category>{
         }
         return categories;
     }
+
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        CategoryDAO categoryDAO = new CategoryDAO();
+        List<Category> list = categoryDAO.findAll();
+        for (Category c: list
+             ) {
+            System.out.println(c.toString());
+
+        }
+    }
+
 
     @Override
     public Category findById(int id) throws SQLException, ClassNotFoundException {

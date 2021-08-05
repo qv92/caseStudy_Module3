@@ -18,7 +18,9 @@ public class ProductDAO implements GeneralDAO<Product>{
     private final String UPDATE = "Update product set name = ?, price = ?, quantity = ?, color = ?, description =?, categoryId =? where id =?;";
     private final String DELETE = "DELETE from product where id =?;";
     private final String FIND_BY_NAME = "SELECT * FROM product where name like ?;";
-
+    private final String COUNT_BY_ID = "select count(*) from product where categoryId=?;";
+    private final String FIND_BY_CATEGORY_ID = "SELECT * FROM product where categoryId = ?;";
+    private final String FIND_BY_PRICE = "select * from product where price between ? and ?;";
 
     @Override
     public List<Product> findAll() throws SQLException, ClassNotFoundException {
@@ -37,6 +39,54 @@ public class ProductDAO implements GeneralDAO<Product>{
             products.add(new Product(id, name, price, quantity, color, description, categoryId));
         }
         return products;
+    }
+
+    public List<Product> findByPrice(int priceMin,int priceMax) throws SQLException, ClassNotFoundException {
+        List<Product> products = new ArrayList<>();
+        Connection connection = sqlConnection.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(FIND_BY_PRICE);
+        preparedStatement.setInt(1,priceMin);
+        preparedStatement.setInt(2,priceMax);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()){
+            int id = resultSet.getInt("id");
+            String name = resultSet.getString("name");
+            double price = resultSet.getDouble("price");
+            int quantity = resultSet.getInt("quantity");
+            String color = resultSet.getString("color");
+            String description = resultSet.getString("description");
+            int categoryId = resultSet.getInt("categoryId");
+            products.add(new Product(id, name, price, quantity, color, description, categoryId));
+        }
+        return products;
+    }
+
+    public List<Product> findByCategoryId(int cId) throws SQLException, ClassNotFoundException {
+        List<Product> products = new ArrayList<>();
+        Connection connection = sqlConnection.getConnection();
+        PreparedStatement preparedStatement = connection.prepareStatement(FIND_BY_CATEGORY_ID);
+        preparedStatement.setInt(1,cId);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()){
+            int id = resultSet.getInt("id");
+            String name = resultSet.getString("name");
+            double price = resultSet.getDouble("price");
+            int quantity = resultSet.getInt("quantity");
+            String color = resultSet.getString("color");
+            String description = resultSet.getString("description");
+            int categoryId = resultSet.getInt("categoryId");
+            products.add(new Product(id, name, price, quantity, color, description, categoryId));
+        }
+        return products;
+    }
+
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        ProductDAO productDAO = new ProductDAO();
+        List<Product> list = productDAO.findByCategoryId(1);
+        for (Product p :list) {
+            System.out.println(p.toString());
+        }
+
     }
 
     @Override

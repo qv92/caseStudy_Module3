@@ -9,7 +9,7 @@
     <meta http-equiv="cache-control" content="max-age=604800" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Website title - bootstrap html template</title>
+    <title>Website </title>
 
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
@@ -40,7 +40,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-2 col-lg-3 col-md-12">
                     <a href="http://bootstrap-ecommerce.com" class="brand-wrap">
-                        <img class="logo" src="images/logo.png">
+                        <img class="logo" src="#">
                     </a> <!-- brand-wrap.// -->
                 </div>
                 <div class="col-xl-6 col-lg-5 col-md-6">
@@ -89,10 +89,11 @@
                                 <small class="text"> Orders </small>
                             </a>
                         </div>
-                        <div class="widget-header">
+                        <div class="widget-header mr-3">
                             <a href="#" class="widget-view">
                                 <div class="icon-area">
                                     <i class="fa fa-shopping-cart"></i>
+                                    <span class="notify">3</span>
                                 </div>
                                 <small class="text"> Cart </small>
                             </a>
@@ -117,25 +118,25 @@
                         <div class="dropdown-menu dropdown-large">
                             <nav class="row">
                                 <div class="col-6">
-                                    <a href="page-index-1.html">Home page 1</a>
-                                    <a href="page-index-2.html">Home page 2</a>
-                                    <a href="page-category.html">All category</a>
-                                    <a href="page-listing-large.html">Listing list</a>
-                                    <a href="page-listing-grid.html">Listing grid</a>
-                                    <a href="page-shopping-cart.html">Shopping cart</a>
-                                    <a href="page-detail-product.html">Product detail</a>
-                                    <a href="page-content.html">Page content</a>
-                                    <a href="page-user-login.html">Page login</a>
-                                    <a href="page-user-register.html">Page register</a>
+                                    <a href="page-index-1.html">#</a>
+                                    <a href="page-index-2.html">#</a>
+                                    <a href="page-category.html">#</a>
+                                    <a href="page-listing-large.html">#</a>
+                                    <a href="page-listing-grid.html">#</a>
+                                    <a href="page-shopping-cart.html">#</a>
+                                    <a href="page-detail-product.html">#</a>
+                                    <a href="page-content.html">#</a>
+                                    <a href="page-user-login.html">#</a>
+                                    <a href="page-user-register.html">#</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="page-profile-main.html">Profile main</a>
-                                    <a href="page-profile-orders.html">Profile orders</a>
-                                    <a href="page-profile-seller.html">Profile seller</a>
-                                    <a href="page-profile-wishlist.html">Profile wishlist</a>
-                                    <a href="page-profile-setting.html">Profile setting</a>
-                                    <a href="page-profile-address.html">Profile address</a>
-                                    <a href="page-components.html" target="_blank">More components</a>
+                                    <a href="page-profile-main.html">#</a>
+                                    <a href="page-profile-orders.html">#</a>
+                                    <a href="page-profile-seller.html">#</a>
+                                    <a href="page-profile-wishlist.html">#</a>
+                                    <a href="page-profile-setting.html">#</a>
+                                    <a href="page-profile-address.html">#</a>
+                                    <a href="page-components.html" target="_blank">#</a>
                                 </div>
                             </nav> <!--  row end .// -->
                         </div> <!--  dropdown-menu dropdown-large end.// -->
@@ -193,60 +194,56 @@
 
 
         <div class="row">
-            <aside class="col-md-2">
+            <div class="col-md-2">
 
                 <article class="filter-group">
                     <h6 class="title">
-                        <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_1">	 Product type </a>
+                        <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_1">Category</a>
                     </h6>
                     <div class="filter-content collapse show" id="collapse_1">
                         <div class="inner">
                             <ul class="list-menu">
-                                <li><a href="#">Shorts  </a></li>
-                                <li><a href="#">Trousers </a></li>
-                                <li><a href="#">Sweaters  </a></li>
-                                <li><a href="#">Clothes  </a></li>
-                                <li><a href="#">Home items </a></li>
-                                <li><a href="#">Jackats</a></li>
-                                <li><a href="#">Somethings </a></li>
+                                <li><a href="?action=category&categoryId=1">Luxury Watch</a></li>
+                                <li><a href="?action=category&categoryId=2">Fashion Watch</a></li>
+                                <li><a href="?action=category&categoryId=3">Military Watch</a></li>
                             </ul>
                         </div> <!-- inner.// -->
                     </div>
                 </article> <!-- filter-group  .// -->
-                <article class="filter-group">
-                    <h6 class="title">
-                        <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_2"> Brands </a>
-                    </h6>
-                    <div class="filter-content collapse show" id="collapse_2">
-                        <div class="inner">
-                            <label class="custom-control custom-checkbox">
-                                <input type="checkbox" checked="" class="custom-control-input">
-                                <div class="custom-control-label">Adidas
-                                    <b class="badge badge-pill badge-light float-right">120</b>  </div>
-                            </label>
-                            <label class="custom-control custom-checkbox">
-                                <input type="checkbox" checked="" class="custom-control-input">
-                                <div class="custom-control-label">Nike
-                                    <b class="badge badge-pill badge-light float-right">15</b>  </div>
-                            </label>
-                            <label class="custom-control custom-checkbox">
-                                <input type="checkbox" checked="" class="custom-control-input">
-                                <div class="custom-control-label">The Noth Face
-                                    <b class="badge badge-pill badge-light float-right">35</b> </div>
-                            </label>
-                            <label class="custom-control custom-checkbox">
-                                <input type="checkbox" checked="" class="custom-control-input">
-                                <div class="custom-control-label">The cat
-                                    <b class="badge badge-pill badge-light float-right">89</b> </div>
-                            </label>
-                            <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input">
-                                <div class="custom-control-label">Honda
-                                    <b class="badge badge-pill badge-light float-right">30</b>  </div>
-                            </label>
-                        </div> <!-- inner.// -->
-                    </div>
-                </article> <!-- filter-group .// -->
+<%--                <article class="filter-group">--%>
+<%--                    <h6 class="title">--%>
+<%--                        <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_2"> Brands </a>--%>
+<%--                    </h6>--%>
+<%--                    <div class="filter-content collapse show" id="collapse_2">--%>
+<%--                        <div class="inner">--%>
+<%--                            <label class="custom-control custom-checkbox">--%>
+<%--                                <input type="checkbox" checked="" class="custom-control-input">--%>
+<%--                                <div class="custom-control-label">Adidas--%>
+<%--                                    <b class="badge badge-pill badge-light float-right">120</b>  </div>--%>
+<%--                            </label>--%>
+<%--                            <label class="custom-control custom-checkbox">--%>
+<%--                                <input type="checkbox" checked="" class="custom-control-input">--%>
+<%--                                <div class="custom-control-label">Nike--%>
+<%--                                    <b class="badge badge-pill badge-light float-right">15</b>  </div>--%>
+<%--                            </label>--%>
+<%--                            <label class="custom-control custom-checkbox">--%>
+<%--                                <input type="checkbox" checked="" class="custom-control-input">--%>
+<%--                                <div class="custom-control-label">The Noth Face--%>
+<%--                                    <b class="badge badge-pill badge-light float-right">35</b> </div>--%>
+<%--                            </label>--%>
+<%--                            <label class="custom-control custom-checkbox">--%>
+<%--                                <input type="checkbox" checked="" class="custom-control-input">--%>
+<%--                                <div class="custom-control-label">The cat--%>
+<%--                                    <b class="badge badge-pill badge-light float-right">89</b> </div>--%>
+<%--                            </label>--%>
+<%--                            <label class="custom-control custom-checkbox">--%>
+<%--                                <input type="checkbox" class="custom-control-input">--%>
+<%--                                <div class="custom-control-label">Honda--%>
+<%--                                    <b class="badge badge-pill badge-light float-right">30</b>  </div>--%>
+<%--                            </label>--%>
+<%--                        </div> <!-- inner.// -->--%>
+<%--                    </div>--%>
+<%--                </article> <!-- filter-group .// -->--%>
                 <article class="filter-group">
                     <h6 class="title">
                         <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_3"> Price range </a>
@@ -254,17 +251,21 @@
                     <div class="filter-content collapse show" id="collapse_3">
                         <div class="inner">
                             <input type="range" class="custom-range" min="0" max="100" name="">
+                            <form action="/products?action=findByPrice" method="post">
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label>Min</label>
-                                    <input class="form-control" placeholder="$0" type="number">
-                                </div>
-                                <div class="form-group text-right col-md-6">
-                                    <label>Max</label>
-                                    <input class="form-control" placeholder="$1,0000" type="number">
-                                </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label>Min</label>
+                                        <input class="form-control" placeholder="$0" type="number" name="priceMin">
+                                    </div>
+                                    <div class="form-group text-right col-md-6">
+                                        <label>Max</label>
+                                        <input class="form-control" placeholder="$1,0000" type="number" name="priceMax">
+                                    </div>
+                                    <a href="/products?action=findByPrice"><button type="submit" class="btn btn-block btn-primary">Apply</button></a>
+
                             </div> <!-- form-row.// -->
-                            <button class="btn btn-block btn-primary">Apply</button>
+                            </form>
                         </div> <!-- inner.// -->
                     </div>
                 </article> <!-- filter-group .// -->
@@ -325,7 +326,7 @@
                     </div>
                 </article> <!-- filter-group .// -->
 
-            </aside> <!-- col.// -->
+            </div> <!-- col.// -->
             <main class="col-md-10">
 
 
@@ -339,9 +340,9 @@
                             <option>Cheapest</option>
                         </select>
                         <div class="btn-group">
-                            <a href="#" class="btn btn-light" data-toggle="tooltip" title="List view">
+                            <a href="/products" class="btn btn-light" data-toggle="tooltip" title="List view">
                                 <i class="fa fa-bars"></i></a>
-                            <a href="#" class="btn btn-light active" data-toggle="tooltip" title="Grid view">
+                            <a href="/products" class="btn btn-light active" data-toggle="tooltip" title="Grid view">
                                 <i class="fa fa-th"></i></a>
                         </div>
                     </div>
@@ -390,7 +391,7 @@
                                         <span class="h5 price">$ ${product.price}</span>
                                         <small class="text-muted">/per bag</small>
                                     </div> <!-- price-wrap.// -->
-                                    <small class="text-success">Free shipping</small>
+                                    <small class="text-success">${product.quantity} Quantity</small>
 
                                     <p class="text-muted mt-3">Guangzhou Electronic Co</p>
                                     <p class="mt-3">
@@ -458,6 +459,10 @@
                     </div> <!-- col.// -->
                 </form>
                 <small class="form-text">We’ll never share your email address with a third-party. </small>
+
+<%--                <c:forEach items="categories" var="c">--%>
+<%--                    <small>${c.name}</small>--%>
+<%--                </c:forEach>--%>
             </div> <!-- col-md-6.// -->
         </div>
 
@@ -531,7 +536,6 @@
     </div><!-- //container -->
 </footer>
 <!-- ========================= FOOTER END // ========================= -->
-
 
 
 </body>
