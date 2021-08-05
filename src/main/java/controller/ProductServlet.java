@@ -34,6 +34,9 @@ public class ProductServlet extends HttpServlet {
                 case "sortByPriceMin":
                     sortByPriceMin(request, response);
                     break;
+                case "page":
+                    findAllByPage(request, response);
+                    break;
                 case "category":
                     findAllByCategoryId(request, response);
                     break;
@@ -98,6 +101,21 @@ public class ProductServlet extends HttpServlet {
     private void findAll(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("Product/list.jsp");
         List<Product> products = productDAO.findAll();
+        int countPage = productDAO.countPage();
+        request.setAttribute("countPage",countPage);
+        request.setAttribute("products", products);
+        List<Category> categories = categoryDAO.findAll();
+        request.setAttribute("categories", categories);
+        requestDispatcher.forward(request, response);
+    }
+
+
+    private void findAllByPage(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("Product/list.jsp");
+        int index = Integer.parseInt(request.getParameter("index"));
+        List<Product> products = productDAO.findAllByPage((index-1)*5);
+        int countPage = productDAO.countPage();
+        request.setAttribute("countPage",countPage);
         request.setAttribute("products", products);
         List<Category> categories = categoryDAO.findAll();
         request.setAttribute("categories", categories);

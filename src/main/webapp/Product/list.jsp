@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-2 col-lg-3 col-md-12">
-                    <a href="http://bootstrap-ecommerce.com" class="brand-wrap">
+                    <a href="/products" class="brand-wrap">
                         <img class="logo" src="#">
                     </a> <!-- brand-wrap.// -->
                 </div>
@@ -182,8 +182,8 @@
         <div class="card mb-3">
             <div class="card-body">
                 <ol class="breadcrumb float-left">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Category name</a></li>
+                    <li class="breadcrumb-item"><a href="/products">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/products">Category name</a></li>
                     <li class="breadcrumb-item active">Item details</li>
                 </ol>
             </div> <!-- card-body .// -->
@@ -204,8 +204,6 @@
                                 <c:forEach items="${categories}" var="c">
                                     <li><a href="?action=category&categoryId=${c.id}">${c.name}</a></li>
                                 </c:forEach>
-<%--                                <li><a href="?action=category&categoryId=2">Fashion Watch</a></li>--%>
-<%--                                <li><a href="?action=category&categoryId=3">Military Watch</a></li>--%>
                             </ul>
                         </div> <!-- inner.// -->
                     </div>
@@ -332,7 +330,13 @@
 
                 <header class="mb-3">
                     <div class="form-inline">
-                        <strong class="mr-md-auto">${products.size()} Items found </strong>
+                        <strong class="mr-md-auto">${products.size()} Items found </strong>&nbsp;&nbsp;
+
+                                <c:forEach  begin="1" end="${countPage}" var="page">
+                                    <strong class="mr-md-1"><a href="?action=page&index=${page}">${page}</a></strong> &nbsp;
+                                </c:forEach>
+
+
                         <select class="mr-2 form-control" onchange="location = this.value;">
                             <option selected>Sort Product</option>
                             <option value="?action=">Latest items</option>
@@ -415,13 +419,10 @@
 
                 <nav class="mb-4" aria-label="Page navigation sample">
                     <ul class="pagination">
-                        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        <c:forEach  begin="1" end="${countPage}" var="page">
+                            <li class="page-item active"><a class="page-link" href="?action=page&index=${page}">${page}</a></li> &nbsp;
+                        </c:forEach>
+
                     </ul>
                 </nav>
 

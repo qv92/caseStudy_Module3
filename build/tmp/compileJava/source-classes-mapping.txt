@@ -2,22 +2,22 @@ DAO/DepartmentDAO.java
  DAO.DepartmentDAO
 model/User.java
  model.User
-controller/UserServlet.java
- controller.UserServlet
-DAO/UserDAO.java
- DAO.UserDAO
-DAO/SQLConnection.java
- DAO.SQLConnection
-model/Department.java
- model.Department
 DAO/GeneralDAO.java
  DAO.GeneralDAO
-model/Product.java
- model.Product
-model/Category.java
- model.Category
+model/Department.java
+ model.Department
+DAO/SQLConnection.java
+ DAO.SQLConnection
 DAO/CategoryDAO.java
  DAO.CategoryDAO
+DAO/UserDAO.java
+ DAO.UserDAO
+model/Category.java
+ model.Category
+model/Product.java
+ model.Product
+controller/UserServlet.java
+ controller.UserServlet
 DAO/ProductDAO.java
  DAO.ProductDAO
 controller/ProductServlet.java

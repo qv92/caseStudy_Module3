@@ -270,7 +270,7 @@
                 </div>
             </div>
         </header><!-- sect-heading -->
-        <c:forEach items="products" var="product">
+        <c:forEach items="${products}" var="product">
         <div class="row">
 
                 <div class="col-md-3">
