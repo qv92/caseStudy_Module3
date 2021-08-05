@@ -28,6 +28,12 @@ public class ProductServlet extends HttpServlet {
         }
         try {
             switch (action) {
+                case "sortByPriceMax":
+                    sortByPriceMax(request, response);
+                break;
+                case "sortByPriceMin":
+                    sortByPriceMin(request, response);
+                    break;
                 case "category":
                     findAllByCategoryId(request, response);
                     break;
@@ -97,6 +103,25 @@ public class ProductServlet extends HttpServlet {
         request.setAttribute("categories", categories);
         requestDispatcher.forward(request, response);
     }
+
+    private void sortByPriceMax(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("Product/list.jsp");
+        List<Product> products = productDAO.findAllByPriceMax();
+        request.setAttribute("products", products);
+        List<Category> categories = categoryDAO.findAll();
+        request.setAttribute("categories", categories);
+        requestDispatcher.forward(request, response);
+    }
+
+    private void sortByPriceMin(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("Product/list.jsp");
+        List<Product> products = productDAO.findAllByPriceMin();
+        request.setAttribute("products", products);
+        List<Category> categories = categoryDAO.findAll();
+        request.setAttribute("categories", categories);
+        requestDispatcher.forward(request, response);
+    }
+
     private void findAllByCategoryId(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("Product/list.jsp");
         int cid= Integer.parseInt(request.getParameter("categoryId"));

@@ -44,14 +44,12 @@
                     </a> <!-- brand-wrap.// -->
                 </div>
                 <div class="col-xl-6 col-lg-5 col-md-6">
-                    <form action="#" class="search-header">
+                    <form action="?action=search"  method="post" class="search-header">
                         <div class="input-group w-100">
                             <select class="custom-select border-right"  name="category_name">
-                                <option value="">All type</option><option value="codex">Special</option>
-                                <option value="comments">Only best</option>
-                                <option value="content">Latest</option>
+                                <option value="">Enter Name</option>
                             </select>
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Search" name="name">
 
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="submit">
@@ -203,9 +201,11 @@
                     <div class="filter-content collapse show" id="collapse_1">
                         <div class="inner">
                             <ul class="list-menu">
-                                <li><a href="?action=category&categoryId=1">Luxury Watch</a></li>
-                                <li><a href="?action=category&categoryId=2">Fashion Watch</a></li>
-                                <li><a href="?action=category&categoryId=3">Military Watch</a></li>
+                                <c:forEach items="${categories}" var="c">
+                                    <li><a href="?action=category&categoryId=${c.id}">${c.name}</a></li>
+                                </c:forEach>
+<%--                                <li><a href="?action=category&categoryId=2">Fashion Watch</a></li>--%>
+<%--                                <li><a href="?action=category&categoryId=3">Military Watch</a></li>--%>
                             </ul>
                         </div> <!-- inner.// -->
                     </div>
@@ -333,11 +333,11 @@
                 <header class="mb-3">
                     <div class="form-inline">
                         <strong class="mr-md-auto">${products.size()} Items found </strong>
-                        <select class="mr-2 form-control">
-                            <option>Latest items</option>
-                            <option>Trending</option>
-                            <option>Most Popular</option>
-                            <option>Cheapest</option>
+                        <select class="mr-2 form-control" onchange="location = this.value;">
+                            <option selected>Sort Product</option>
+                            <option value="?action=">Latest items</option>
+                            <option value="?action=sortByPriceMin">Price Low To High</option>
+                            <option value="?action=sortByPriceMax">Price High To Low</option>
                         </select>
                         <div class="btn-group">
                             <a href="/products" class="btn btn-light" data-toggle="tooltip" title="List view">
