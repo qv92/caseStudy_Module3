@@ -22,3 +22,13 @@ DAO/ProductDAO.java
  DAO.ProductDAO
 controller/ProductServlet.java
  controller.ProductServlet
+model/Bill.java
+ model.Bill
+controller/Cart.java
+ controller.Cart
+controller/DeleteFromCart.java
+ controller.DeleteFromCart
+model/BillProduct.java
+ model.BillProduct
+controller/AddToCart.java
+ controller.AddToCart

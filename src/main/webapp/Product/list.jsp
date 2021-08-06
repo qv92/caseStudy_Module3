@@ -267,62 +267,65 @@
                         </div> <!-- inner.// -->
                     </div>
                 </article> <!-- filter-group .// -->
-                <article class="filter-group">
-                    <h6 class="title">
-                        <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_4"> Sizes </a>
-                    </h6>
-                    <div class="filter-content collapse show" id="collapse_4">
-                        <div class="inner">
-                            <label class="checkbox-btn">
-                                <input type="checkbox">
-                                <span class="btn btn-light"> XS </span>
-                            </label>
 
-                            <label class="checkbox-btn">
-                                <input type="checkbox">
-                                <span class="btn btn-light"> SM </span>
-                            </label>
 
-                            <label class="checkbox-btn">
-                                <input type="checkbox">
-                                <span class="btn btn-light"> LG </span>
-                            </label>
 
-                            <label class="checkbox-btn">
-                                <input type="checkbox">
-                                <span class="btn btn-light"> XXL </span>
-                            </label>
-                        </div> <!-- inner.// -->
-                    </div>
-                </article> <!-- filter-group .// -->
-                <article class="filter-group">
-                    <h6 class="title">
-                        <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_5"> Condition </a>
-                    </h6>
-                    <div class="filter-content collapse show" id="collapse_5">
-                        <div class="inner">
-                            <label class="custom-control custom-radio">
-                                <input type="radio" name="myfilter_radio" checked="" class="custom-control-input">
-                                <div class="custom-control-label">Any condition</div>
-                            </label>
+<%--                <article class="filter-group">--%>
+<%--                    <h6 class="title">--%>
+<%--                        <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_4"> Sizes </a>--%>
+<%--                    </h6>--%>
+<%--                    <div class="filter-content collapse show" id="collapse_4">--%>
+<%--                        <div class="inner">--%>
+<%--                            <label class="checkbox-btn">--%>
+<%--                                <input type="checkbox">--%>
+<%--                                <span class="btn btn-light"> XS </span>--%>
+<%--                            </label>--%>
 
-                            <label class="custom-control custom-radio">
-                                <input type="radio" name="myfilter_radio" class="custom-control-input">
-                                <div class="custom-control-label">Brand new </div>
-                            </label>
+<%--                            <label class="checkbox-btn">--%>
+<%--                                <input type="checkbox">--%>
+<%--                                <span class="btn btn-light"> SM </span>--%>
+<%--                            </label>--%>
 
-                            <label class="custom-control custom-radio">
-                                <input type="radio" name="myfilter_radio" class="custom-control-input">
-                                <div class="custom-control-label">Used items</div>
-                            </label>
+<%--                            <label class="checkbox-btn">--%>
+<%--                                <input type="checkbox">--%>
+<%--                                <span class="btn btn-light"> LG </span>--%>
+<%--                            </label>--%>
 
-                            <label class="custom-control custom-radio">
-                                <input type="radio" name="myfilter_radio" class="custom-control-input">
-                                <div class="custom-control-label">Very old</div>
-                            </label>
-                        </div> <!-- inner.// -->
-                    </div>
-                </article> <!-- filter-group .// -->
+<%--                            <label class="checkbox-btn">--%>
+<%--                                <input type="checkbox">--%>
+<%--                                <span class="btn btn-light"> XXL </span>--%>
+<%--                            </label>--%>
+<%--                        </div> <!-- inner.// -->--%>
+<%--                    </div>--%>
+<%--                </article> <!-- filter-group .// -->--%>
+<%--                <article class="filter-group">--%>
+<%--                    <h6 class="title">--%>
+<%--                        <a href="#" class="dropdown-toggle" data-toggle="collapse" data-target="#collapse_5"> Condition </a>--%>
+<%--                    </h6>--%>
+<%--                    <div class="filter-content collapse show" id="collapse_5">--%>
+<%--                        <div class="inner">--%>
+<%--                            <label class="custom-control custom-radio">--%>
+<%--                                <input type="radio" name="myfilter_radio" checked="" class="custom-control-input">--%>
+<%--                                <div class="custom-control-label">Any condition</div>--%>
+<%--                            </label>--%>
+
+<%--                            <label class="custom-control custom-radio">--%>
+<%--                                <input type="radio" name="myfilter_radio" class="custom-control-input">--%>
+<%--                                <div class="custom-control-label">Brand new </div>--%>
+<%--                            </label>--%>
+
+<%--                            <label class="custom-control custom-radio">--%>
+<%--                                <input type="radio" name="myfilter_radio" class="custom-control-input">--%>
+<%--                                <div class="custom-control-label">Used items</div>--%>
+<%--                            </label>--%>
+
+<%--                            <label class="custom-control custom-radio">--%>
+<%--                                <input type="radio" name="myfilter_radio" class="custom-control-input">--%>
+<%--                                <div class="custom-control-label">Very old</div>--%>
+<%--                            </label>--%>
+<%--                        </div> <!-- inner.// -->--%>
+<%--                    </div>--%>
+<%--                </article> <!-- filter-group .// -->--%>
 
             </div> <!-- col.// -->
             <main class="col-md-10">
@@ -399,7 +402,7 @@
 
                                     <p class="text-muted mt-3">Guangzhou Electronic Co</p>
                                     <p class="mt-3">
-                                        <a href="#" class="btn btn-outline-primary"> <i class="fa fa-envelope"></i> Add to cart </a>
+                                        <a href="/add-to-cart?productId=${product.id}" class="btn btn-outline-primary"> <i class="fa fa-envelope"></i> Add to cart </a>
                                         <a href="#" class="btn btn-light"><i class="fa fa-heart"></i> Save </a>
                                     </p>
 
