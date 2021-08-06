@@ -16,6 +16,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     compileOnly group: 'javax.servlet', name: 'servlet-api', version: '2.5'
     compileOnly group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+    compileOnly group: 'javax.servlet', name: 'servlet-api', version: '2.5'
 
     implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
     implementation group: 'javax.servlet', name: 'jstl', version: '1.2'

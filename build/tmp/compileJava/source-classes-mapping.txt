@@ -32,3 +32,5 @@ model/BillProduct.java
  model.BillProduct
 controller/AddToCart.java
  controller.AddToCart
+controller/DeleteOne.java
+ controller.DeleteOne
