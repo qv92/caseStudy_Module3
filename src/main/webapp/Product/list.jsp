@@ -40,7 +40,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-2 col-lg-3 col-md-12">
                     <a href="/products" class="brand-wrap">
-                        <img class="logo" src="#">
+                        <img class="logo" src="images/logo.png">
                     </a> <!-- brand-wrap.// -->
                 </div>
                 <div class="col-xl-6 col-lg-5 col-md-6">
@@ -62,19 +62,19 @@
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="widgets-wrap float-md-right">
                         <div class="widget-header mr-3">
-                            <a href="#" class="widget-view">
+                            <a href="adminDB/admin-login.jsp" class="widget-view">
                                 <div class="icon-area">
                                     <i class="fa fa-user"></i>
-                                    <span class="notify">3</span>
+<%--                                    <span class="notify"></span>--%>
                                 </div>
-                                <small class="text"> My profile </small>
+                                <small class="text"> Log in </small>
                             </a>
                         </div>
                         <div class="widget-header mr-3">
                             <a href="#" class="widget-view">
                                 <div class="icon-area">
                                     <i class="fa fa-comment-dots"></i>
-                                    <span class="notify">1</span>
+<%--                                    <span class="notify"></span>--%>
                                 </div>
                                 <small class="text"> Message </small>
                             </a>
@@ -88,10 +88,13 @@
                             </a>
                         </div>
                         <div class="widget-header mr-3">
-                            <a href="#" class="widget-view">
+                            <a href="/cart" class="widget-view">
                                 <div class="icon-area">
                                     <i class="fa fa-shopping-cart"></i>
-                                    <span class="notify">3</span>
+                                    <span class="notify">
+                                        <c:if test="${cart.size()!=null}">
+                                        ${cart.size()}
+                                    </c:if></span>
                                 </div>
                                 <small class="text"> Cart </small>
                             </a>
@@ -112,35 +115,10 @@
             <div class="collapse navbar-collapse" id="main_nav">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-bars text-muted mr-2"></i> Demo pages </a>
-                        <div class="dropdown-menu dropdown-large">
-                            <nav class="row">
-                                <div class="col-6">
-                                    <a href="page-index-1.html">#</a>
-                                    <a href="page-index-2.html">#</a>
-                                    <a href="page-category.html">#</a>
-                                    <a href="page-listing-large.html">#</a>
-                                    <a href="page-listing-grid.html">#</a>
-                                    <a href="page-shopping-cart.html">#</a>
-                                    <a href="page-detail-product.html">#</a>
-                                    <a href="page-content.html">#</a>
-                                    <a href="page-user-login.html">#</a>
-                                    <a href="page-user-register.html">#</a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="page-profile-main.html">#</a>
-                                    <a href="page-profile-orders.html">#</a>
-                                    <a href="page-profile-seller.html">#</a>
-                                    <a href="page-profile-wishlist.html">#</a>
-                                    <a href="page-profile-setting.html">#</a>
-                                    <a href="page-profile-address.html">#</a>
-                                    <a href="page-components.html" target="_blank">#</a>
-                                </div>
-                            </nav> <!--  row end .// -->
-                        </div> <!--  dropdown-menu dropdown-large end.// -->
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/products"> <i class="fa fa-bars text-muted mr-2"></i> Home </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ready to ship</a>
+                        <a class="nav-link" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Trade shows</a>
@@ -248,7 +226,7 @@
                     </h6>
                     <div class="filter-content collapse show" id="collapse_3">
                         <div class="inner">
-                            <input type="range" class="custom-range" min="0" max="100" name="">
+<%--                            <input type="range" class="custom-range" min="0" max="100" name="">--%>
                             <form action="/products?action=findByPrice" method="post">
                             <div class="form-row">
 

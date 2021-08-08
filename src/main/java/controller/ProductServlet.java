@@ -22,6 +22,7 @@ public class ProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
+
         String action = request.getParameter("action");
         if (action == null) {
             action = "";
@@ -108,6 +109,8 @@ public class ProductServlet extends HttpServlet {
         request.setAttribute("categories", categories);
         requestDispatcher.forward(request, response);
     }
+
+
 
 
     private void findAllByPage(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, ServletException, IOException {

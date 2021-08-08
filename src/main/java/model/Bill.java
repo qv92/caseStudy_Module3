@@ -1,12 +1,30 @@
 package model;
 
 import java.io.Serializable;
+import java.sql.Date;
+import java.time.LocalDateTime;
 
 public class Bill implements Serializable{
     private int id;
-    private User buyer;
+    private int customerId;
     private String buyDate;
-    private long priceTotal;
+    private double priceTotal;
+
+    public Bill() {
+    }
+
+    public Bill(int id, int customerId, String buyDate, double priceTotal) {
+        this.id = id;
+        this.customerId = customerId;
+        this.buyDate = buyDate;
+        this.priceTotal = priceTotal;
+    }
+
+    public Bill(int customerId, String buyDate, double priceTotal) {
+        this.customerId = customerId;
+        this.buyDate = buyDate;
+        this.priceTotal = priceTotal;
+    }
 
     public int getId() {
         return id;
@@ -16,12 +34,12 @@ public class Bill implements Serializable{
         this.id = id;
     }
 
-    public User getBuyer() {
-        return buyer;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setBuyer(User buyer) {
-        this.buyer = buyer;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
     public String getBuyDate() {
@@ -32,11 +50,11 @@ public class Bill implements Serializable{
         this.buyDate = buyDate;
     }
 
-    public long getPriceTotal() {
+    public double getPriceTotal() {
         return priceTotal;
     }
 
-    public void setPriceTotal(long priceTotal) {
+    public void setPriceTotal(double priceTotal) {
         this.priceTotal = priceTotal;
     }
 }

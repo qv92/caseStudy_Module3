@@ -47,6 +47,13 @@ public class BillProduct {
         this.product = product;
     }
 
+    public BillProduct() {
+    }
 
-
+    public BillProduct(double unitPrice, int quantity, Bill bill, Product product) {
+        this.unitPrice = unitPrice;
+        this.quantity = quantity;
+        this.bill = bill;
+        this.product = product;
+    }
 }

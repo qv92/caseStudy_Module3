@@ -60,7 +60,7 @@ public class AddToCart extends HttpServlet {
             session.setAttribute("cart", map);// luu tam vao session
         }
 
-        response.sendRedirect(request.getContextPath() + "/cart");
+        response.sendRedirect(request.getContextPath() + "/products");
     }
 
     @Override

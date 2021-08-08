@@ -1,36 +1,52 @@
-DAO/DepartmentDAO.java
- DAO.DepartmentDAO
-model/User.java
- model.User
-DAO/GeneralDAO.java
- DAO.GeneralDAO
-model/Department.java
- model.Department
+model/BillProduct.java
+ model.BillProduct
+DAO/CustomerDAO.java
+ DAO.CustomerDAO
 DAO/SQLConnection.java
  DAO.SQLConnection
 DAO/CategoryDAO.java
  DAO.CategoryDAO
-DAO/UserDAO.java
- DAO.UserDAO
-model/Category.java
- model.Category
 model/Product.java
  model.Product
+model/Department.java
+ model.Department
+model/User.java
+ model.User
+model/BillProductDB.java
+ model.BillProductDB
 controller/UserServlet.java
  controller.UserServlet
+model/Bill.java
+ model.Bill
+model/Category.java
+ model.Category
+DAO/GeneralDAO.java
+ DAO.GeneralDAO
+DAO/DepartmentDAO.java
+ DAO.DepartmentDAO
+controller/Cart.java
+ controller.Cart
+DAO/BillProductDAO.java
+ DAO.BillProductDAO
+DAO/UserDAO.java
+ DAO.UserDAO
+model/Customer.java
+ model.Customer
+controller/DeleteOne.java
+ controller.DeleteOne
+controller/DeleteFromCart.java
+ controller.DeleteFromCart
+DAO/BillDAO.java
+ DAO.BillDAO
+adminController/adminproduct.java
+ adminController.adminproduct
+controller/Confirmorder.java
+ controller.Confirmorder
 DAO/ProductDAO.java
  DAO.ProductDAO
 controller/ProductServlet.java
  controller.ProductServlet
-model/Bill.java
- model.Bill
-controller/Cart.java
- controller.Cart
-controller/DeleteFromCart.java
- controller.DeleteFromCart
-model/BillProduct.java
- model.BillProduct
 controller/AddToCart.java
  controller.AddToCart
-controller/DeleteOne.java
- controller.DeleteOne
+controller/AddToCart2.java
+ controller.AddToCart2
